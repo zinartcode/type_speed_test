@@ -4,6 +4,12 @@ const HOURHAND = document.querySelector("#hour");
 const MINUTEHAND = document.querySelector("#minute");
 const SECONDHAND = document.querySelector("#second");
 
+var strarray = new Array("Every business has hundreds, if not thousands, of Internet-connected devices. While this Internet of Things, also called IoT, helps companies operate more effectively in changing eniroment, it also presents a far bigger security risk than many businesses realize.",
+"What to do? Businesses need to understand that limiting risk goes far beyond protecting the devices themselves. To have effective security, companies also need to establish guidelines for how these devices are being used and the entire system in which they operate.",
+"Develop a policy that illustrates everyone's role in cybersecurity. Users should be aware of risks and precautions required, such as when an employee uses a mobile phone to access confidential data in an airport. Revisit your technology operations on a regular basis",
+ "It's important to understand how connected devices fit into your overall business strategy. Focus on what devices are being used, what benefits they provide and the potential risks they create. Also try to revisit your technology operations on a regular basis",
+ "Many people use their own connected devices to work both inside and outside the office. Make sure your IT department has established policies to control and protect your network when these devices are being used. In addition, security controls should be monitored");
+
 var date = new Date();
 console.log(date);
 let hr = date.getHours();
@@ -61,31 +67,15 @@ function runTimer() {
   timer[2] = Math.floor(timer[3] - (timer[1] * 100) - (timer[0] * 6000));
 }
 // Insert random text
+
 function putstr() {
-var strarray = new Array("Every business has hundreds, if not thousands, of Internet-connected devices. While this Internet of Things, or IoT, helps companies operate more effectively, it also presents a far bigger security risk than many businesses realize.",
-"What to do? Businesses need to understand that limiting risk goes far beyond protecting the devices themselves. To have effective security, companies need to establish guidelines for how these devices are being used and the entire system in which they operate.",
-"Develop a policy that illustrates everyone's role in cybersecurity. Users should be aware of risks and precautions required, such as when an employee uses a mobile phone to access confidential data in an airport. Revisit your technology operations on a regular",
- "It's important to understand how connected devices fit into your overall business strategy. Focus on what devices are being used, what benefits they provide and the potential risks they create. Revisit your technology operations on a regular basis to lower risk",
- "Many people use their own connected devices to work both inside and outside the office. Make sure your IT department has established policies to control and protect your network when these devices are being used. In addition, security controls should be monitored");
-
 randomnum = Math.round(Math.random()*4);
  para = document.getElementById('rand-text');
 //para = document.getElementById("#origin-text p");
 para.innerHTML = strarray[randomnum];
 }
 
-window.onload = function putstr() {
-  var strarray = new Array("Every business has hundreds, if not thousands, of Internet-connected devices. While this Internet of Things, or IoT, helps companies operate more effectively, it also presents a far bigger security risk than many businesses realize.",
-  "What to do? Businesses need to understand that limiting risk goes far beyond protecting the devices themselves. To have effective security, companies need to establish guidelines for how these devices are being used and the entire system in which they operate.",
-  "Develop a policy that illustrates everyone’s role in cybersecurity. Users should be aware of risks and precautions required, such as when an employee uses a mobile phone to access confidential data in an airport. Revisit your technology operations on a regular",
-   "It's important to understand how connected devices fit into your overall business strategy. Focus on what devices are being used, what benefits they provide and the potential risks they create. Revisit your technology operations on a regular basis to lower risk",
-   "Many people use their own connected devices to work both inside and outside the office. Make sure your IT department has established policies to control and protect your network when these devices are being used. In addition, security controls should be monitored");
-
-randomnum = Math.round(Math.random()*4);
- para = document.getElementById('rand-text');
-//para = document.getElementById("#origin-text p");
-para.innerHTML = strarray[randomnum];
-}
+window.onload = putstr()
 
 // Match the text entered with the provided text on the page:
 function spellCheck() {
