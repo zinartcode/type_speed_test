@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Typing Speed Test</title>
+    <script src="script.js" async></script>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i" type="text/css" media="all">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class="main">
+      <div class="clockbox">
+        <svg id="aclock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+          <g id="face">
+              <path class="hour-marks" d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6"/>
+              <circle class="mid-circle" cx="300" cy="300" r="16.2"/>
+          </g>
+          <g id="hour">
+              <path class="hour-arm" d="M300.5 298V142"/>
+              <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+            </g>
+            <g id="minute">
+              <path class="minute-arm" d="M300.5 298V67"/>
+              <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+            </g>
+            <g id="second">
+              <path class="second-arm" d="M300.5 350V55"/>
+              <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+            </g>
+          </svg>
+      </div>
+      <h1 class="masthead">Time is everything</h1>
+        <article class="intro">
+            <p>This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Good Luck!</p>
+        </article><!-- .intro -->
+        <section class="test-area">
+            <div id="origin-text">
+                <p id="rand-text"></p>
+            </div><!-- #origin-text -->
+
+            <div class="test-wrapper">
+                <textarea id="test-area" name="textarea" rows="6" placeholder="The clock starts when you start typing."></textarea>
+            </div><!-- .test-wrapper -->
+
+            <div class="meta">
+                <section id="clock">
+                    <div class="timer">00:00:00</div>
+                </section>
+
+                <button id="reset">Start over</button>
+            </div><!-- .meta -->
+        </section><!-- .test-area -->
+        <div class="list">
+          <ol>
+            <li>First try</li>
+            <li>Second try</li>
+            <li>Third try</li>
+          </ol>
+        </div>
+    </main>
+
+</body>
+
+</html>
