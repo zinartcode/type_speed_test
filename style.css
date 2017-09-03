@@ -255,6 +255,28 @@ svg {
     background-color: #E95D0F;
 }
 
-.list {
+/*.list {
 font-size: 24px;
+color: white;
+}*/
+
+#l1 {
+font-size: 30px;
+color: dimgray;
+}
+#l2 {
+font-size: 24px;
+color: grey;
+}
+#l3 {
+font-size: 18px;
+color: #909090;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #429890;
+		background: linear-gradient(rgba(0,0,0,0), #429890);
 }

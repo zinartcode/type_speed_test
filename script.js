@@ -4,12 +4,6 @@ const HOURHAND = document.querySelector("#hour");
 const MINUTEHAND = document.querySelector("#minute");
 const SECONDHAND = document.querySelector("#second");
 
-var strarray = new Array("Every business has hundreds, if not thousands, of Internet-connected devices. While this Internet of Things, also called IoT, helps companies operate more effectively in changing eniroment, it also presents a far bigger security risk than many businesses realize.",
-"What to do? Businesses need to understand that limiting risk goes far beyond protecting the devices themselves. To have effective security, companies also need to establish guidelines for how these devices are being used and the entire system in which they operate.",
-"Develop a policy that illustrates everyone's role in cybersecurity. Users should be aware of risks and precautions required, such as when an employee uses a mobile phone to access confidential data in an airport. Revisit your technology operations on a regular basis",
- "It's important to understand how connected devices fit into your overall business strategy. Focus on what devices are being used, what benefits they provide and the potential risks they create. Also try to revisit your technology operations on a regular basis",
- "Many people use their own connected devices to work both inside and outside the office. Make sure your IT department has established policies to control and protect your network when these devices are being used. In addition, security controls should be monitored");
-
 var date = new Date();
 console.log(date);
 let hr = date.getHours();
@@ -30,7 +24,6 @@ function runTheClock() {
     HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
     MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
     SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
-
 }
 
 var interval = setInterval(runTheClock, 1000);
@@ -43,10 +36,19 @@ const originText = document.querySelector("#origin-text p").innerHTML;
 const randText = document.querySelector("#rand-text").innerHTML;
 const resetButton = document.querySelector("#reset");
 const theTimer = document.querySelector(".timer");
+const testResult1 = document.querySelector("#l1");
+const testResult2 = document.querySelector("#l2");
+const testResult3 = document.querySelector("#l3");
 
+var strarray = new Array("Every business has hundreds, if not thousands, of Internet-connected devices. While this Internet of Things, also called IoT, helps companies operate more effectively in changing eniroment, it also presents a far bigger security risk than many businesses realize.",
+"What to do? Businesses need to understand that limiting risk goes far beyond protecting the devices themselves. To have effective security, companies also need to establish guidelines for how these devices are being used and the entire system in which they operate.",
+"Develop a policy that illustrates everyone's role in cybersecurity. Users should be aware of risks and precautions required, such as when an employee uses a mobile phone to access confidential data in an airport. Revisit your technology operations on a regular basis",
+ "It's important to understand how connected devices fit into your overall business strategy. Focus on what devices are being used, what benefits they provide and the potential risks they create. Also try to revisit your technology operations on a regular basis",
+ "Many people use their own connected devices to work both inside and outside the office. Make sure your IT department has established policies to control and protect your network when these devices are being used. In addition, security controls should be monitored");
 var timer = [0, 0, 0, 0];
 var interval;
 var timerRunnig = false;
+var i = 0;
 
 // Add leading zero to numbers 9 or below (purely for aesthetics):
 function leadingZero(time) {
@@ -67,15 +69,13 @@ function runTimer() {
   timer[2] = Math.floor(timer[3] - (timer[1] * 100) - (timer[0] * 6000));
 }
 // Insert random text
-
-function putstr() {
+function putStr() {
 randomnum = Math.round(Math.random()*4);
  para = document.getElementById('rand-text');
 //para = document.getElementById("#origin-text p");
 para.innerHTML = strarray[randomnum];
 }
-
-window.onload = putstr()
+window.onload = putStr()
 
 // Match the text entered with the provided text on the page:
 function spellCheck() {
@@ -106,16 +106,30 @@ function start() {
   console.log(textEnteredLength);
 }
 
-// Reset everything:
+// Reset test and store my current result:
 function reset() {
-  putstr();
+  i++;
+      if(i == 1)
+      testResult1.innerHTML = "Your score  " + theTimer.innerHTML;
+      if(i == 2) {
+      testResult2.innerHTML = testResult1.innerHTML;
+      testResult1.innerHTML = "Your score  " + theTimer.innerHTML;
+    }
+      if(i == 3) {
+        testResult3.innerHTML = testResult2.innerHTML;
+        testResult2.innerHTML = testResult1.innerHTML;
+        testResult1.innerHTML = "Your score  " + theTimer.innerHTML;
+        i = 0;
+      }
+
+  putStr();
   clearInterval(interval);
   interval = null;
   timer = [0,0,0,0];
   timerRunnig = false;
 
   testArea.value = "";
-  theTimer.innerHTML - "00:00:00";
+  theTimer.innerHTML = "00:00:00";
   testWrapper.style.borderColor = "grey";
 }
 
