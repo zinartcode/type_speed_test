@@ -196,7 +196,6 @@ svg {
 .intro p,
 .test-area {
     margin: 0 auto;
-    //max-width: 80rem;
 		max-width: 738px;
 }
 
@@ -255,27 +254,29 @@ svg {
     background-color: #E95D0F;
 }
 
-/*.list {
-font-size: 24px;
-color: white;
-}*/
-
 #l1 {
-font-size: 30px;
-color: dimgray;
+    margin: 0 auto;
+    max-width: 738px;
+    font-size: 30px;
+    color: dimgray;
 }
 #l2 {
-font-size: 24px;
-color: grey;
+    margin: 0 auto;
+    max-width: 738px;
+    font-size: 24px;
+    color: grey;
 }
 #l3 {
-font-size: 18px;
-color: #909090;
+    margin: 0 auto;
+    max-width: 738px;
+    font-size: 18px;
+    color: #909090;
 }
 
 ul {
+    list-style-type:none;
     margin: 0;
-    padding: 0;
+    padding: 1em;
     overflow: hidden;
     background-color: #429890;
 		background: linear-gradient(rgba(0,0,0,0), #429890);
