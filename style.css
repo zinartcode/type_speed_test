@@ -275,6 +275,7 @@ svg {
 
 ul {
     list-style-type:none;
+    height: 6em;
     margin: 0;
     padding: 1em;
     overflow: hidden;

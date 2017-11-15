@@ -40,7 +40,7 @@ const testResult1 = document.querySelector("#l1");
 const testResult2 = document.querySelector("#l2");
 const testResult3 = document.querySelector("#l3");
 
-var strarray = new Array("Every business has hundreds, if not thousands, of Internet-connected devices. While this Internet of Things, also called IoT, helps companies operate more effectively in changing eniroment, it also presents a far bigger security risk than many businesses realize.",
+var strarray = new Array("Every business has hundreds, if not thousands, of Internet-connected devices. While this Internet of Things, also called IoT, helps companies operate more effectively in changing enviroment, it also presents a far bigger security risk than many businesses realize.",
 "What to do? Businesses need to understand that limiting risk goes far beyond protecting the devices themselves. To have effective security, companies also need to establish guidelines for how these devices are being used and the entire system in which they operate.",
 "Develop a policy that illustrates everyone's role in cybersecurity. Users should be aware of risks and precautions required, such as when an employee uses a mobile phone to access confidential data in an airport. Revisit your technology operations on a regular basis",
  "It's important to understand how connected devices fit into your overall business strategy. Focus on what devices are being used, what benefits they provide and the potential risks they create. Also try to revisit your technology operations on a regular basis",
@@ -108,6 +108,7 @@ function start() {
 
 // Reset test and store my current result:
 function reset() {
+  console.log("i is" + i);
   i++;
       if(i == 1)
       testResult1.innerHTML = "Your score  " + theTimer.innerHTML;
